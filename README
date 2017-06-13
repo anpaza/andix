@@ -1,0 +1,29 @@
+This is the AndiX project - Linux piggyback for Android.
+
+With the advent of Android TV platform there is an increasing number of
+boxes running relatively powerful hardware, capable of much more than
+jut watching movies.
+
+The goal of this project is to have a real Linux environment running
+together with Android. This will allow to get all the benefits
+of Linux and Android at the same time.
+
+The OpenWrt project (http://openwrt.org) has been choosen as the
+supporting Linux distribution. It is designed for small devices with
+limited resources, which somehow ressembles Android TV boxes
+(because manufacturers limit hardware resources just to be enough
+for home enterntainment functionality).
+
+
+-= Building AndiX =-
+
+For a quick start, just run the 'first-time-setup' script.
+It will allow you to download everything needed, set up and build
+a simple AndiX image which you can then run in qemu.
+
+If you want to do more, please read Developer's Guide in OpenWrt wiki:
+
+	https://wiki.openwrt.org/doc/guide-developer
+
+It is recommended to build additional packages for AndiX within the
+OpenWrt build environment.

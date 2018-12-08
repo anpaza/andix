@@ -83,12 +83,14 @@ ${GREEN}Please choose what you want to do now:
 
     ${WHITE}1. ${BROWN}Download the OpenWrt repository.${RESET}
     ${WHITE}2. ${BROWN}Configure OpenWrt for AndiX.${RESET}
-    ${WHITE}3. ${BROWN}Build OpenWrt.${RESET}
+    ${WHITE}3. ${BROWN}Build AndiX.${RESET}
+    ${WHITE}4. ${BROWN}Run AndiX in QEMU.${RESET}
 
     ${WHITE}0. ${BROWN}Quit now${RESET}
 
 EOF
 
+        key=0
 	read -p "${DRED}Enter action number: ${WHITE}" key
 	echo ${RESET}
 
@@ -101,6 +103,9 @@ EOF
 			;;
 		3)
 			build_openwrt
+			;;
+		4)
+			./qemu-run-AndiX
 			;;
 		0)
 			quit=yes

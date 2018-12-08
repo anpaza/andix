@@ -90,8 +90,10 @@ eval "CMDLINE=\${CMDLINE_${SUBTARGET}}"
 	-o -z "$CMDLINE" ] && exit -1
 
 echo "${GREEN}Launching virtual machine for arch ${WHITE}$ARCH${RESET}"
+echo "${YELLOW}Press Ctrl+A,C to access QEMU monitor. Enter 'quit' to exit.${RESET}"
 
 qemu-system-$ARCH $MACHINE -nographic \
+        -machine type=virt,secure=off \
         -smp 2 -m 512 \
         -kernel $KERNEL \
         -drive file=$ROOT,if=none,format=raw,id=hd0 \
